@@ -72,3 +72,9 @@ Plugins/*/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+
+# Python libraries (download these using Content/Pythontal/install-openpyxl.(bat|sh)
+Content/Python/et_xmlfile/*
+Content/Python/et_xmlfile-1.1.0.dist-info/*
+Content/Python/openpyxl/*
+Content/Python/openpyxl-3.0.9.dist-info/*
