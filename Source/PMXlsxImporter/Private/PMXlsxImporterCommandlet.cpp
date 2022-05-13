@@ -1,3 +1,5 @@
+// Copyright 2022 Proletariat, Inc.
+
 #include "PMXlsxImporterCommandlet.h"
 #include "PMXlsxImporterLog.h"
 #include "PMXlsxImporterSettings.h"

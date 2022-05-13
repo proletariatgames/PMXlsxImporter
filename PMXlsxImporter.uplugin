@@ -2,14 +2,15 @@
 	"FileVersion": 3,
 	"Version": 1,
 	"VersionName": "1.0",
+	"EngineVersion": "4.27.0",
 	"FriendlyName": "PMXlsxImporter",
 	"Description": "Imports data from xlsx files",
-	"Category": "Other",
+	"Category": "Editor",
 	"CreatedBy": "Proletariat, Inc.",
-	"CreatedByURL": "",
-	"DocsURL": "",
+	"CreatedByURL": "https://proletariat.com",
+	"DocsURL": "https://github.com/proletariatgames/PMXlsxImporter",
 	"MarketplaceURL": "",
-	"SupportURL": "",
+	"SupportURL": "https://github.com/proletariatgames/PMXlsxImporter/issues",
 	"CanContainContent": true,
 	"IsBetaVersion": false,
 	"IsExperimentalVersion": false,
@@ -18,7 +19,8 @@
 		{
 			"Name": "PMXlsxImporter",
 			"Type": "Editor",
-			"LoadingPhase": "Default"
+			"LoadingPhase": "Default",
+			"WhitelistPlatforms": [ "Win64", "Win32", "Mac" ]
 		}
 	],
 	"Plugins": [

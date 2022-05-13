@@ -1,5 +1,6 @@
-// Copyright Epic Games, Inc. All Rights Reserved.
+// Copyright 2022 Proletariat, Inc.
 
+using System.IO;
 using UnrealBuildTool;
 
 public class PMXlsxImporter : ModuleRules
@@ -7,9 +8,12 @@ public class PMXlsxImporter : ModuleRules
     public PMXlsxImporter(ReadOnlyTargetRules Target) : base(Target)
     {
         PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
+		bEnforceIWYU = true;
 
         PublicIncludePaths.AddRange(
             new string[] {
+                // required by https://www.unrealengine.com/en-US/marketplace-guidelines 2.6.3.e
+                Path.Combine(ModuleDirectory, "Public")
 				// ... add public include paths required here ...
 			}
             );

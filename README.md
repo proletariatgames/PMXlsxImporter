@@ -4,7 +4,7 @@ This plugin allows an Unreal 4 or 5 project to generate DataAssets from XLSX spr
 
 ## INSTALLATION
 
-1. Clone this repository into your project's Plugins directory.
+1. Clone this repository into your project's Plugins directory or download it from the Unreal Marketplace.
 2. Install [Python3](https://python.org). Any version of Python 3 is fine. This plugin uses Unreal's built-in Python plugin which runs Python 3.7. This step is necessary to download the libraries used by the plugin.
 3. Install openpyxl (the python library used to read XLSX files) by running `PMXlsxImporter/Content/Python/install-openpyxl.bat` (Windows) or `install-openpyxl.sh` (Mac/Linux).
 4. Build and run Unreal Editor.

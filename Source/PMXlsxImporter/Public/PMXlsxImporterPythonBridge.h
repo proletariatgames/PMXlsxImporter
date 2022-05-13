@@ -1,3 +1,5 @@
+// Copyright 2022 Proletariat, Inc.
+
 #pragma once
 
 #include "CoreMinimal.h"
@@ -9,11 +11,11 @@ struct FPMXlsxImporterPythonBridgeDataAssetInfo
 	GENERATED_BODY()
 
 public:
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(BlueprintReadWrite, Category = XlsxImporter)
 	FString AssetName;
 
 	// Map of header to value for that data
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(BlueprintReadWrite, Category = XlsxImporter)
 	TMap<FString, FString> Data;
 };
 

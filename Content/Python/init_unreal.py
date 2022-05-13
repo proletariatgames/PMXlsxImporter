@@ -1,3 +1,5 @@
+# Copyright 2022 Proletariat, Inc.
+
 import unreal
 import os
 import openpyxl

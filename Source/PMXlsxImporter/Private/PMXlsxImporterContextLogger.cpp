@@ -1,3 +1,5 @@
+// Copyright 2022 Proletariat, Inc.
+
 #include "PMXlsxImporterContextLogger.h"
 #include "PMXlsxImporterLog.h"
 

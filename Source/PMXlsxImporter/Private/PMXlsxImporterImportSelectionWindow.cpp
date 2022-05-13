@@ -1,3 +1,5 @@
+// Copyright 2022 Proletariat, Inc.
+
 #include "PMXlsxImporterImportSelectionWindow.h"
 #include "Components/CheckBox.h"
 #include "Components/ComboBoxString.h"

@@ -1,4 +1,4 @@
-// Copyright 2022 Proletariat, Inc. All Rights Reserved.
+// Copyright 2022 Proletariat, Inc.
 
 #pragma once
 
@@ -22,11 +22,11 @@ public:
 	virtual void PostEditChangeChainProperty(struct FPropertyChangedChainEvent& PropertyChangedEvent) override;
 #endif
 
-	UPROPERTY(EditAnywhere, Config)
+	UPROPERTY(EditAnywhere, Config, Category = XlsxImporter)
 	TArray<FPMXlsxImporterSettingsEntry> AssetImportSettings;
 
 	// While importing, up to this many errors will be accumulated and reported before stopping the import process
-	UPROPERTY(EditAnywhere, Config)
+	UPROPERTY(EditAnywhere, Config, Category = XlsxImporter)
 	int32 MaxErrors = 100;
 
 	void ImportCheckedOut(FPMXlsxImporterContextLogger& InOutErrors) const;

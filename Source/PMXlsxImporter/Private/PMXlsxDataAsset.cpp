@@ -1,3 +1,5 @@
+// Copyright 2022 Proletariat, Inc.
+
 #include "PMXlsxDataAsset.h"
 #include "Misc/DefaultValueHelper.h"
 #include "PMXlsxImporterLog.h"

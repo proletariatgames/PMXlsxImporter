@@ -78,3 +78,8 @@ Content/Python/et_xmlfile/*
 Content/Python/et_xmlfile-1.1.0.dist-info/*
 Content/Python/openpyxl/*
 Content/Python/openpyxl-3.0.9.dist-info/*
+
+# Build artifacts
+PMXlsxImporter*.zip
+Package/*
+Config/*

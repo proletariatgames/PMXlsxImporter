@@ -1,3 +1,5 @@
+// Copyright 2022 Proletariat, Inc.
+
 #pragma once
 
 #include "CoreMinimal.h"

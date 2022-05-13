@@ -1,3 +1,5 @@
+// Copyright 2022 Proletariat, Inc.
+
 #include "PMXlsxImporterSettingsEntry.h"
 #include "PMXlsxDataAsset.h"
 #include "PMXlsxImporterLog.h"
@@ -46,7 +48,7 @@ TArray<FString> FPMXlsxImporterSettingsEntry::GetWorksheetNames() const
 	}
 
 	UPMXlsxImporterPythonBridge* PythonBridge = UPMXlsxImporterPythonBridge::Get();
-	return PythonBridge->ReadWorksheetNames(XlsxAbsolutePath);
+	return PythonBridge ? PythonBridge->ReadWorksheetNames(XlsxAbsolutePath) : TArray<FString>();
 }
 
 void FPMXlsxImporterSettingsEntry::SyncAssets(FPMXlsxImporterContextLogger& InOutErrors, int32 MaxErrors) const
@@ -90,6 +92,11 @@ void FPMXlsxImporterSettingsEntry::SyncAssets(FPMXlsxImporterContextLogger& InOu
 	IFileManager& FileManager = IFileManager::Get();
 
 	UPMXlsxImporterPythonBridge* PythonBridge = UPMXlsxImporterPythonBridge::Get();
+	if (PythonBridge == nullptr)
+	{
+		return; // UPMXlsxImporterPythonBridge::Get() logs an error when it returns null
+	}
+
 	TArray<FPMXlsxImporterPythonBridgeDataAssetInfo> ParsedWorksheet = PythonBridge->ReadWorksheet(XlsxAbsolutePath, WorksheetName);
 
 	for (const FPMXlsxImporterPythonBridgeDataAssetInfo& Info : ParsedWorksheet)
@@ -211,6 +218,11 @@ void FPMXlsxImporterSettingsEntry::ParseData(FPMXlsxImporterContextLogger& InOut
 	}
 
 	UPMXlsxImporterPythonBridge* PythonBridge = UPMXlsxImporterPythonBridge::Get();
+	if (PythonBridge == nullptr)
+	{
+		return; // UPMXlsxImporterPythonBridge::Get() logs an error when it returns null
+	}
+
 	TArray<FPMXlsxImporterPythonBridgeDataAssetInfo> ParsedWorksheet = PythonBridge->ReadWorksheet(XlsxAbsolutePath, WorksheetName);
 
 	for (const FPMXlsxImporterPythonBridgeDataAssetInfo& Info : ParsedWorksheet)
@@ -261,6 +273,11 @@ void FPMXlsxImporterSettingsEntry::Validate(FPMXlsxImporterContextLogger& InOutE
 	}
 
 	UPMXlsxImporterPythonBridge* PythonBridge = UPMXlsxImporterPythonBridge::Get();
+	if (PythonBridge == nullptr)
+	{
+		return; // UPMXlsxImporterPythonBridge::Get() logs an error when it returns null
+	}
+
 	TArray<FPMXlsxImporterPythonBridgeDataAssetInfo> ParsedWorksheet = PythonBridge->ReadWorksheet(XlsxAbsolutePath, WorksheetName);
 
 	UPMXlsxDataAsset* PreviousAsset = nullptr;

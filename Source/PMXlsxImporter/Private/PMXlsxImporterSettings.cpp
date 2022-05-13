@@ -1,3 +1,5 @@
+// Copyright 2022 Proletariat, Inc.
+
 #include "PMXlsxImporterSettings.h"
 #include "PMXlsxImporterSettingsEntry.h"
 #include "PMXlsxImporterPythonBridge.h"
